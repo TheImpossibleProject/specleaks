@@ -11,7 +11,7 @@ import Nimble
 
 public typealias LeakTestConstructor = () -> AnyObject
 
-extension Expectation where T==LeakTestConstructor {
+extension SyncExpectation where Value==LeakTestConstructor {
 
     public func toNotLeak(timeout: DispatchTimeInterval = AsyncDefaults.timeout, pollInterval: DispatchTimeInterval = AsyncDefaults.pollInterval, description: String? = nil, shouldFail: Bool = false) {
         do {
