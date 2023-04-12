@@ -5,13 +5,13 @@ import PackageDescription
 let package = Package(
     name: "SpecLeaks",    
     platforms: [
-        .iOS(.v13)
+        .iOS(.v12)
     ],
     products: [        
         .library(name: "SpecLeaks", targets: ["SpecLeaks"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Quick/Nimble", from: "11.2.2"),
+        .package(url: "https://github.com/Quick/Nimble", from: "10.0.0"),
         .package(url: "https://github.com/Quick/Quick", from: "5.0.1"),
     ],
     targets: [     
